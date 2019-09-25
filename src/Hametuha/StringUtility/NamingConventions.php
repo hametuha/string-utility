@@ -6,7 +6,7 @@ namespace Hametuha\StringUtility;
 /**
  * Utility functions for naming conventions.
  *
- * @package Hametuha\StringUtility
+ * @package string-utilty
  */
 trait NamingConventions {
 	
