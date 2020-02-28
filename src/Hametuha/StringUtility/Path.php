@@ -20,7 +20,9 @@ trait Path {
 	 * @return string URL.
 	 */
 	public function path_to_url( $path ) {
-		if ( false !== strpos( $path, ABSPATH ) ) {
+		if ( false !== strpos( $path, WP_CONTENT_DIR ) ) {
+			return str_replace( WP_CONTENT_DIR, WP_CONTENT_URL, $path );
+		} elseif ( false !== strpos( $path, ABSPATH ) ) {
 			return str_replace( ABSPATH, home_url( '/' ), $path );
 		} else {
 			return $path;
