@@ -49,7 +49,6 @@ jobs:
         run: echo "UnitTest is skipped on PHP 5.6"
         if: matrix.php == 5.6
 
-
   release:
     name: Create Release Package
     needs: [ test ]
