@@ -46,7 +46,7 @@ jobs:
         if: matrix.php != 5.6
 
       - name: Unit Test Skipped
-        run: echo ""
+        run: echo "UnitTest is skipped on PHP 5.6"
         if: matrix.php == 5.6
 
 
