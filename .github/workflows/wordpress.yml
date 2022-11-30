@@ -43,6 +43,7 @@ jobs:
 
       - name: Unit Test
         run: composer test
+        if: matrix.php != 5.6
 
 
   release:

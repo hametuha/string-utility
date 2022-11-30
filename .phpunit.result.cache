@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"TestNameConvention::testCamelToSnake":0.002,"TestNameConvention::testCamelToKebab":0,"TestNameConvention::testKebabToCamel":0,"TestNameConvention::testSnakeToCamel":0,"TestNameConvention::testSnakeToKebab":0,"TestPath::testPathConverter":0}}

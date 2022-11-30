@@ -12,7 +12,7 @@ class TestNameConvention extends \PHPUnit\Framework\TestCase {
 	 */
 	private $str = null;
 
-	protected function setUp() {
+	protected function setUp():void {
 		$this->str = new NamingConventionImplementor();
 	}
 

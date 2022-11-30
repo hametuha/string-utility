@@ -12,7 +12,7 @@ class TestPath extends \PHPUnit\Framework\TestCase {
 	 */
 	private $path = null;
 
-	protected function setUp() {
+	protected function setUp():void {
 		define( 'ABSPATH', '/var/www/wordpress/' );
 		define( 'WP_CONTENT_DIR', '/var/www/wordpress/contents' );
 		define( 'WP_CONTENT_URL', 'https://example.com/contents' );
