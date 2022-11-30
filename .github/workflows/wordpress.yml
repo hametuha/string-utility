@@ -1,4 +1,4 @@
-name: CI/CD for ${{ github.workspace }}/${{ github.event.repository.name }}
+name: CI/CD for String Utility
 
 on:
   push:
