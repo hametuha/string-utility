@@ -1,20 +1,22 @@
 <?php
 
+use Hametuha\StringUtilityTest\NamingConventionImplementor;
+
 /**
  * Test singleton pattern.
  */
-class NameConventionTest extends \PHPUnit\Framework\TestCase {
-	
+class TestNameConvention extends \PHPUnit\Framework\TestCase {
+
 	/**
-	 * @var HametuhaNamingConventionImplementor
+	 * @var NamingConventionImplementor
 	 */
 	private $str = null;
-	
+
 	protected function setUp() {
-		$this->str = new HametuhaNamingConventionImplementor();
+		$this->str = new NamingConventionImplementor();
 	}
-	
-	
+
+
 	/**
 	 * Test snake case.
 	 */
@@ -25,7 +27,7 @@ class NameConventionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertEquals( 'no_prefix', $this->str->camel_to_snake( '_No_Prefix' ) );
 		$this->assertEquals( 'no_hyphen', $this->str->camel_to_snake( '-NoHyphen' ) );
 	}
-	
+
 	/**
 	 * Test kebab case.
 	 *
@@ -37,7 +39,7 @@ class NameConventionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertEquals( 'no-prefix', $this->str->camel_to_kebab( '_No_Prefix' ) );
 		$this->assertEquals( 'no-hyphen', $this->str->camel_to_kebab( '-NoHyphen' ) );
 	}
-	
+
 	/**
 	 * Test snake case to camel
 	 */
@@ -45,7 +47,7 @@ class NameConventionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertEquals( 'WpUnitTest', $this->str->kebab_to_camel( 'wp-unit-test', true ) );
 		$this->assertEquals( 'wpUnitTest', $this->str->kebab_to_camel( 'wp-unit-test' ) );
 	}
-	
+
 	/**
 	 * Test snake case to camel
 	 */
@@ -53,7 +55,7 @@ class NameConventionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertEquals( 'WpUnitTest', $this->str->kebab_to_camel( 'wp_unit_test', true ) );
 		$this->assertEquals( 'wpUnitTest', $this->str->kebab_to_camel( 'wp_unit_test' ) );
 	}
-	
+
 	/**
 	 * Test lower case group
 	 */

@@ -9,7 +9,7 @@ namespace Hametuha\StringUtility;
  * @package string-utilty
  */
 trait NamingConventions {
-	
+
 	/**
 	 * Make hyphenated string to camel case
 	 *
@@ -27,7 +27,7 @@ trait NamingConventions {
 		}
 		return $str;
 	}
-	
+
 	/**
 	 *
 	 *
@@ -40,7 +40,7 @@ trait NamingConventions {
 		$kebab = $this->snake_to_kebab( $string );
 		return $this->kebab_to_camel( $kebab, $upper_case_first );
 	}
-	
+
 	/**
 	 * Make camel case to hyphenated string
 	 *
@@ -53,7 +53,7 @@ trait NamingConventions {
 			return '-' . strtolower( $match[1] );
 		}, (string) $string ) ) ), '-' );
 	}
-	
+
 	/**
 	 * Convert camel case to snake case.
 	 *
@@ -64,7 +64,7 @@ trait NamingConventions {
 	public function camel_to_snake( $string ) {
 		return str_replace( '-', '_', $this->camel_to_kebab( $string ) );
 	}
-	
+
 	/**
 	 * Convert snake case to kebab case.
 	 *
@@ -75,7 +75,7 @@ trait NamingConventions {
 	public function snake_to_kebab( $string ) {
 		return str_replace( '_', '-', $string );
 	}
-	
+
 	/**
 	 * Convert kebab case to snake case.
 	 *
@@ -86,7 +86,7 @@ trait NamingConventions {
 	public function kebab_to_snake( $string ) {
 		return str_replace( '-', '_', $string );
 	}
-	
+
 	/**
 	 * Make hyphenated string to camel case
 	 *
@@ -99,7 +99,7 @@ trait NamingConventions {
 	public function hyphen_to_camel( $string, $upper_first = false ) {
 		return $this->kebab_to_camel( $string, $upper_first );
 	}
-	
+
 	/**
 	 * Make camel case to hyphenated string
 	 *

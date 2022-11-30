@@ -1,15 +1,17 @@
 <?php
 
+use Hametuha\StringUtilityTest\PathImplementor;
+
 /**
  * Test path.
  */
-class PathTest extends \PHPUnit\Framework\TestCase {
-	
+class TestPath extends \PHPUnit\Framework\TestCase {
+
 	/**
-	 * @var HametuhaPathImplementor
+	 * @var PathImplementor
 	 */
 	private $path = null;
-	
+
 	protected function setUp() {
 		define( 'ABSPATH', '/var/www/wordpress/' );
 		define( 'WP_CONTENT_DIR', '/var/www/wordpress/contents' );
@@ -18,9 +20,9 @@ class PathTest extends \PHPUnit\Framework\TestCase {
 		define( 'WP_PLUGIN_URL', 'https://example.com/plugins' );
 		define( 'WPMU_PLUGIN_DIR', '/var/www/wordpress/mu' );
 		define( 'WPMU_PLUGIN_URL', 'https://example.com/mu' );
-		$this->path = new HametuhaPathImplementor();
+		$this->path = new PathImplementor();
 	}
-	
+
 	/**
 	 * Test path converter.
 	 */

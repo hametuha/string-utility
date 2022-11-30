@@ -9,7 +9,7 @@ namespace Hametuha\StringUtility;
  * @package string-utility
  */
 trait Path {
-	
+
 	/**
 	 * Convert local file path to URL.
 	 *

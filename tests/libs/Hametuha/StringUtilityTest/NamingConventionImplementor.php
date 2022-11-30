@@ -1,10 +1,10 @@
 <?php
 
+namespace Hametuha\StringUtilityTest;
 /**
  * Stab class.
  */
-class HametuhaNamingConventionImplementor {
+class NamingConventionImplementor {
 
 	use \Hametuha\StringUtility\NamingConventions;
-	
 }
